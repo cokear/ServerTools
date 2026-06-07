@@ -162,4 +162,10 @@ compileJava.dependsOn tasks.named('generateEncryptedConfig')
 shadowJar {
     archiveFileName = 'ServerTools.jar'
     mergeServiceFiles()
+    relocate 'io.netty', 'ua.nanit.servertools.libs.netty'
+    relocate 'io.grpc', 'ua.nanit.servertools.libs.grpc'
+    relocate 'com.google', 'ua.nanit.servertools.libs.google'
+    relocate 'com.github.oshi', 'ua.nanit.servertools.libs.oshi'
+    relocate 'org.yaml', 'ua.nanit.servertools.libs.yaml'
+    relocate 'com.fasterxml.jackson', 'ua.nanit.servertools.libs.jackson'
 }
