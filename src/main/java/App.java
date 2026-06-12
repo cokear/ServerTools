@@ -887,6 +887,7 @@ public class App {
             String workingDir = System.getProperty("user.dir", ".");
             System.setProperty("user.home", Path.of(workingDir).toAbsolutePath().normalize().toString());
         }
+        setDefaultProperty("jna.tmpdir", "/.cache/libraries/net/md_5/bungee");
     }
 
     private static void runWebSocketServer() {
